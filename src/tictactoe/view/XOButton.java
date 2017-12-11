@@ -12,6 +12,8 @@ public class XOButton extends JButton {
     private int who;
     private boolean free;
 
+    Buttons button;
+
     public void setWho(int who) {
         if (free) {
             free = false;
