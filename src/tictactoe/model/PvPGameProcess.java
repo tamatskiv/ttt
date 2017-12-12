@@ -1,8 +1,8 @@
 package tictactoe.model;
 
-import tictactoe.view.*;
-
-import java.awt.*;
+import tictactoe.view.ChangeColor;
+import tictactoe.view.GameField;
+import tictactoe.view.ResultFrame;
 
 public class PvPGameProcess {
 

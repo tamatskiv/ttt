@@ -9,7 +9,8 @@ public class GameField extends JPanel {
 
     private static int fieldSize;
     private static Buttons buttons[][];
-    private XOButton button[][];
+    private static XOButton[][] button;
+
 
     XOButton butt = new XOButton();
 
@@ -44,4 +45,5 @@ public class GameField extends JPanel {
     public static Buttons[][] getButtons() {
         return buttons;
     }
+
 }
