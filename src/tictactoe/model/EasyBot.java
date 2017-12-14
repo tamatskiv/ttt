@@ -1,9 +1,9 @@
 package tictactoe.model;
 
 import tictactoe.view.GameField;
+import tictactoe.view.XOButton;
 
 public class EasyBot extends Bot {
-    private int difficulty;
     private int fieldSize;
 
     private int enemywho;
@@ -11,11 +11,10 @@ public class EasyBot extends Bot {
 
     private boolean isFind = false;
 
-    private Buttons[][] buttons;
-    private static CheckWinner checkWinner;
+    private XOButton[][] buttons;
+    private CheckWinner checkWinner;
 
-    public EasyBot(int fieldSize, int difficulty, int who) {
-        this.difficulty = difficulty;
+    public EasyBot(int fieldSize, int who) {
         this.fieldSize = fieldSize;
         this.who = who;
         buttons = GameField.getButtons();
@@ -34,10 +33,10 @@ public class EasyBot extends Bot {
             } else enemywho = 1;
         }
         isFind = false;
+        checkWinner.refreshData(buttons);
         for (int k = 0; k < fieldSize; k++) {
             if (isFind) break;
             for (int s = 0; s < fieldSize; s++) {
-                checkWinner.refreshData(buttons);
                 if (buttons[k][s].isFree() && !PvMGameProcess.isEndGame()) {
                     buttons[k][s].setTest(enemywho, false);
                     if (checkWinner.checkWin(enemywho, k, s)) {

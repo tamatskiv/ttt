@@ -1,6 +1,7 @@
 package tictactoe.model;
 
 import tictactoe.view.GameField;
+import tictactoe.view.XOButton;
 
 public class MediumBot extends Bot {
     private int difficulty;
@@ -13,7 +14,7 @@ public class MediumBot extends Bot {
     private boolean isFind2;
     private boolean nextprediction;
 
-    private Buttons[][] buttons;
+    private XOButton[][] buttons;
     public MediumBot(int fieldSize, int difficulty, int who) {
         this.difficulty = difficulty;
         this.fieldSize = fieldSize;

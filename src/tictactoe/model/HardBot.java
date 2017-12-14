@@ -1,6 +1,7 @@
 package tictactoe.model;
 
 import tictactoe.view.GameField;
+import tictactoe.view.XOButton;
 
 public class HardBot extends Bot {
 
@@ -18,7 +19,7 @@ public class HardBot extends Bot {
     private boolean nextprediction2 = false;
     private boolean nextprediction3 = false;
 
-    private Buttons[][] buttons;
+    private XOButton[][] buttons;
 
     public HardBot(int fieldSize, int difficulty, int who) {
         this.difficulty = difficulty;

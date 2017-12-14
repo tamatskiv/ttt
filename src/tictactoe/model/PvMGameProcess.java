@@ -3,6 +3,7 @@ package tictactoe.model;
 import tictactoe.view.ChangeColor;
 import tictactoe.view.GameField;
 import tictactoe.view.ResultFrame;
+import tictactoe.view.XOButton;
 
 import java.util.Random;
 
@@ -32,7 +33,7 @@ public class PvMGameProcess {
         this.difficulty = difficulty;
         checkWinner = new CheckWinner(fieldSize, fieldSize == 3 ? 3 : (fieldSize == 5 ? 4 : 5));
         turn = randFirstTurn();
-        boteasy = new EasyBot(fieldSize, difficulty, turn == 0 ? 1 : 2);
+        boteasy = new EasyBot(fieldSize, turn == 0 ? 1 : 2);
         botmid = new MediumBot(fieldSize, difficulty, turn == 0 ? 1 : 2);
         bothard = new HardBot(fieldSize, difficulty, turn == 0 ? 1 : 2);
         botultr = new UltrBot(fieldSize, difficulty, turn == 0 ? 1 : 2);
@@ -63,7 +64,7 @@ public class PvMGameProcess {
     }
 
     public static void isWinner(int X, int Y) {
-        Buttons[][] buttons = GameField.getButtons();
+        XOButton[][] buttons = GameField.getButtons();
         checkWinner.refreshData(buttons);
         if (checkWinner.checkWin(1, X, Y)) {
             endGame();
@@ -85,7 +86,7 @@ public class PvMGameProcess {
 
     public static void endGame() {
         endGame = true;
-        Buttons[][] buttons = GameField.getButtons();
+        XOButton[][] buttons = GameField.getButtons();
         for (int i = 0; i < fieldSize; i++) {
             for (int j = 0; j < fieldSize; j++) {
                 if (buttons[i][j].getWho() == 0)
@@ -98,7 +99,7 @@ public class PvMGameProcess {
         endGame = false;
         turn = randFirstTurn();
         System.out.println(turn + " turn");
-        boteasy = new EasyBot(fieldSize, difficulty, turn == 0 ? 1 : 2);
+        boteasy = new EasyBot(fieldSize, turn == 0 ? 1 : 2);
         botmid = new MediumBot(fieldSize, difficulty, turn == 0 ? 1 : 2);
         bothard = new HardBot(fieldSize, difficulty, turn == 0 ? 1 : 2);
         botultr = new UltrBot(fieldSize, difficulty, turn == 0 ? 1 : 2);

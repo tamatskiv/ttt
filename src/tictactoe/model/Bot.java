@@ -1,6 +1,7 @@
 package tictactoe.model;
 
 import tictactoe.view.GameField;
+import tictactoe.view.XOButton;
 
 import java.util.Random;
 
@@ -11,7 +12,7 @@ public abstract class Bot {
     protected CheckWinner checkWinner;
 
 
-    private Buttons[][] buttons;
+    private XOButton[][] buttons;
 
     abstract public void hitBot();
 

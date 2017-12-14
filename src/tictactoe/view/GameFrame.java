@@ -2,7 +2,6 @@ package tictactoe.view;
 
 import tictactoe.model.PvMGameProcess;
 import tictactoe.model.PvPGameProcess;
-import tictactoe.model.Buttons;
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -28,7 +27,7 @@ public class GameFrame extends JFrame {
     private PvPGameProcess pvpgame;
     private PvMGameProcess pvmgame;
 
-    private Buttons buttons[][];
+    private XOButton buttons[][];
 
     public GameFrame() {
         setUndecorated(true);

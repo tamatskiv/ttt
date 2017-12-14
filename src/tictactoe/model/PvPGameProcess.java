@@ -3,6 +3,7 @@ package tictactoe.model;
 import tictactoe.view.ChangeColor;
 import tictactoe.view.GameField;
 import tictactoe.view.ResultFrame;
+import tictactoe.view.XOButton;
 
 public class PvPGameProcess {
 
@@ -32,7 +33,7 @@ public class PvPGameProcess {
     }
 
     public static void isWinner(int X, int Y) {
-        Buttons[][] buttons = GameField.getButtons();
+        XOButton[][] buttons = GameField.getButtons();
         checkWinner.refreshData(buttons);
         if (checkWinner.checkWin(first, X, Y)) {
             endGame();
@@ -47,7 +48,7 @@ public class PvPGameProcess {
     }
 
     public static void endGame() {
-        Buttons[][] buttons = GameField.getButtons();
+        XOButton[][] buttons = GameField.getButtons();
         for (int i = 0; i < fieldSize; i++) {
             for (int j = 0; j < fieldSize; j++) {
                 if (buttons[i][j].getWho() == 0)

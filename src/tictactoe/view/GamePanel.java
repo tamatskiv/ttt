@@ -2,7 +2,6 @@ package tictactoe.view;
 
 import tictactoe.model.PvMGameProcess;
 import tictactoe.model.PvPGameProcess;
-import tictactoe.model.Buttons;
 
 import javax.swing.*;
 
@@ -159,7 +158,7 @@ public class GamePanel extends JPanel {
         restart.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Buttons[][] buttons = field.getButtons();
+                XOButton[][] buttons = field.getButtons();
                 for (int i = 0; i < fieldSize; i++)
                     for (int j = 0; j < fieldSize; j++)
                         buttons[i][j].refresh();

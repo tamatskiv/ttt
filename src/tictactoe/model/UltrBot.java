@@ -1,7 +1,7 @@
 package tictactoe.model;
 
 import tictactoe.view.GameField;
-
+import tictactoe.view.XOButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,14 +16,14 @@ public class UltrBot extends Bot {
     private int enemywho; // human
     private int who; //ai
 
-    private Buttons[][] buttons;
+    private XOButton[][] buttons;
 
     private int[][] bestmove;
     private ArrayList availablePoints;
 
     public UltrBot(int fieldSize, int difficulty, int who) {
         checkWinner = new CheckWinner(fieldSize, fieldSize == 3 ? 3 : (fieldSize == 5 ? 4 : 5));
-        maxDepth = fieldSize == 3 ? 10 : (fieldSize == 5 ? 4 : 3);
+        maxDepth = fieldSize == 3 ? 10 : (fieldSize == 5 ? 5 : 3);
 
         this.difficulty = difficulty;
         this.fieldSize = fieldSize;
@@ -41,7 +41,7 @@ public class UltrBot extends Bot {
         bestmove = new int[2][2];
     }
 
-    public List<Point> getAvailableStates(Buttons[][] newbuttons) {
+    public List<Point> getAvailableStates(XOButton[][] newbuttons) {
         availablePoints = new ArrayList<>();
         for (int i = 0; i < fieldSize; ++i) {
             for (int j = 0; j < fieldSize; ++j) {
@@ -53,7 +53,7 @@ public class UltrBot extends Bot {
         return availablePoints;
     }
 
-    private int minimax(int player, int x, int y, Buttons[][] newbuttons, int depth) {
+    private int minimax(int player, int x, int y, XOButton[][] newbuttons, int depth) {
         checkWinner.refreshData(newbuttons);
         List<Point> pointsAvailable = getAvailableStates(newbuttons);   //get all free positions
         if (checkWinner.checkWin(enemywho, x, y)) {
@@ -76,19 +76,10 @@ public class UltrBot extends Bot {
             if (player == who) {
                 score = minimax(enemywho, score1.getRaw(), score1.getCol(), newbuttons,depth + 1);           //find the best position for curr player(AI)
                 score1.setScore(score);                         //save score at curr position
-                if(score==1){
-                    newbuttons[score1.getRaw()][score1.getCol()].setTest(0, true);        //remove test value
-                    scoreList.add(score1);
-                    break;
-                }
+
             } else {
                 score = minimax(who, score1.getRaw(), score1.getCol(), newbuttons,depth + 1);           //find the best position for enemy(human)
                 score1.setScore(score);
-                if(score==-1){
-                    newbuttons[score1.getRaw()][score1.getCol()].setTest(0, true);        //remove test value
-                    scoreList.add(score1);
-                    break;
-                }
             }
             newbuttons[score1.getRaw()][score1.getCol()].setTest(0, true);        //remove test value
             scoreList.add(score1);                                      //add score with curr position to list
@@ -102,9 +93,6 @@ public class UltrBot extends Bot {
                     MaxScore = scoreList.get(i).getScore();
                     bestmove[0][0] = scoreList.get(i).getRaw();                  //get x,y of best position to hit
                     bestmove[0][1] = scoreList.get(i).getCol();
-                    if(MaxScore==1){
-                        break;
-                    }
                 }
             }
         } else {                                                     //find min score for curr combination(the best way for enemy)
@@ -113,9 +101,6 @@ public class UltrBot extends Bot {
                     MinScore = scoreList.get(i).getScore();
                     bestmove[0][0] = scoreList.get(i).getRaw();
                     bestmove[0][1] = scoreList.get(i).getCol();
-                    if(MaxScore==-1){
-                        break;
-                    }
                 }
             }
         }
