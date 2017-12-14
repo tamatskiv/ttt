@@ -6,22 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79f2e9c9-9bac-4986-9d40-9202814b7422" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tictactoe/model/Buttons.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tictactoe/model/Bot.java" afterPath="$PROJECT_DIR$/src/tictactoe/model/Bot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tictactoe/model/CheckWinner.java" afterPath="$PROJECT_DIR$/src/tictactoe/model/CheckWinner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tictactoe/model/EasyBot.java" afterPath="$PROJECT_DIR$/src/tictactoe/model/EasyBot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tictactoe/model/HardBot.java" afterPath="$PROJECT_DIR$/src/tictactoe/model/HardBot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tictactoe/model/MediumBot.java" afterPath="$PROJECT_DIR$/src/tictactoe/model/MediumBot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tictactoe/model/PvMGameProcess.java" afterPath="$PROJECT_DIR$/src/tictactoe/model/PvMGameProcess.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tictactoe/model/PvPGameProcess.java" afterPath="$PROJECT_DIR$/src/tictactoe/model/PvPGameProcess.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tictactoe/model/UltrBot.java" afterPath="$PROJECT_DIR$/src/tictactoe/model/UltrBot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tictactoe/view/GameField.java" afterPath="$PROJECT_DIR$/src/tictactoe/view/GameField.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tictactoe/view/GameFrame.java" afterPath="$PROJECT_DIR$/src/tictactoe/view/GameFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tictactoe/view/GamePanel.java" afterPath="$PROJECT_DIR$/src/tictactoe/view/GamePanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tictactoe/view/XOButton.java" afterPath="$PROJECT_DIR$/src/tictactoe/view/XOButton.java" />
-    </list>
+    <list default="true" id="79f2e9c9-9bac-4986-9d40-9202814b7422" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -133,7 +118,7 @@
         <entry file="file://$PROJECT_DIR$/src/tictactoe/view/XOButton.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="226">
-              <caret line="78" column="45" lean-forward="true" selection-start-line="78" selection-start-column="45" selection-end-line="78" selection-end-column="45" />
+              <caret line="78" column="45" lean-forward="false" selection-start-line="78" selection-start-column="45" selection-end-line="78" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -195,7 +180,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="117" />
     <option name="y" value="-18" />
     <option name="width" value="1386" />
@@ -468,8 +453,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -479,7 +463,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34542587" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34542587" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -891,7 +875,7 @@
     <entry file="file://$PROJECT_DIR$/src/tictactoe/view/XOButton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
-          <caret line="78" column="45" lean-forward="true" selection-start-line="78" selection-start-column="45" selection-end-line="78" selection-end-column="45" />
+          <caret line="78" column="45" lean-forward="false" selection-start-line="78" selection-start-column="45" selection-end-line="78" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
